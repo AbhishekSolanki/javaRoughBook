@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<head>
+  
+  <script type="text/JavaScript" src="jquery-1.11.0.min.js"></script>
+  <script type="text/JavaScript" src="jquery-ui-1.10.3.minimal.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="index.css">
+
+<script type="text/javascript">
+$(document).ready(function(){
+
+  $("ul#categoryorder").sortable({ 
+         opacity: 0.6, 
+         cursor: 'move'  
+         });
+		 
+		  $("#abc").draggable({ 
+        
+         });
+
+});
+function saveDisplayChanges()
+{
+var order = $("ul#categoryorder").sortable("serialize");
+$('#categorysavemessage').html('Saving changes..');
+console.log(order);
+//$.post("update_displayorder.php",order,function(theResponse){
+//"#categorysavemessage").html(theResponse);
+//'#categorysavemessage').css("color","green");
+}
+</script>
+</script>
+
+</head>
+<body>
+     <ul id="categoryorder">
+	 <li id="ID_1"><img src="sample.jpg" alt="chart 1"  height="50" width="200"/>Chart 1</li>
+	  <li id="ID_2"><img src="sample.jpg" alt="chart 1"  height="50" width="200"/>Chart 2</li>
+	   <li id="ID_3" ><img src="sample.jpg" alt="chart 1"  height="50" width="200"/>Chart 3
+	    <li id="ID_4" ><img src="sample.jpg" alt="chart 1"  height="50" width="200"/>Chart 4
+	 </ul>
+	 
+	 <p>
+
+
+	 <input type="button" value="Save Changes" onClick="saveDisplayChanges();"/>
+
+<div id="message">Changes not saved</div>
+
+	<!--  <div id="abc">Abhishek</div> -->
+</body>
+</html>

@@ -1,0 +1,25 @@
+
+#categoryorder {
+    display: inline;
+    float: left;
+    list-style-type: none;
+    margin: 0 0 0 50px;
+    width: 500px;
+}
+element.style {
+    opacity: 1;
+}
+#categoryorder li {
+    background-color: #fcfcfc;
+    border: 2px solid #dddddd;
+    color: #003366;
+    cursor: move;
+    display: inline;
+    float: left;
+    font-size: 20px;
+    line-height: 50px;
+    margin: 0 50px 50px 0;
+    text-align: center;
+    width: 200px;
+}
+
